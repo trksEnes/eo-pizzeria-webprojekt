@@ -793,9 +793,11 @@ button {
 .table:after {
   bottom:-9px
 }
-.table:hover:not(:disabled) {
-  border-color:var(--red);
-  color:var(--red)
+@media (hover:hover) and (pointer:fine) {
+  .table[aria-pressed=false]:hover:not(:disabled) {
+    border-color:var(--red);
+    color:var(--red)
+  }
 }
 .table[aria-pressed=true] {
   background:var(--red);
