@@ -2,57 +2,39 @@
 
 **Responsive Pizzeria-Website mit HTML, CSS und JavaScript · Enes Türksever**
 
-## Aufgabe und Umsetzung
+## Die Aufgabe
 
-Im Webentwicklungspraktikum war die Aufgabe, eine Pizzeria-Website zu planen und umzusetzen. Auf Grundlage meines Pflichtenhefts habe ich eine Speisekarte mit Bestellauswahl und eine interaktive Tischauswahl realisiert.
+Im Webentwicklungspraktikum sollte ich eine Pizzeria-Website planen und umsetzen. In meinem Pflichtenheft habe ich dafür die Seitenstruktur, die Funktionen und das Verhalten der Bestell- und Tischauswahl beschrieben.
 
-Die Website verbindet eine responsive Gestaltung mit filterbaren Menüeinträgen, einem Warenkorb und Formularvalidierung. Die Anwendungslogik ist von der Darstellung getrennt und wird durch automatisierte Tests geprüft.
+Ziel war, dass Besucher das Angebot kennenlernen, ihre Essensauswahl zusammenstellen und passende Tische für einen Besuch auswählen können. Die Website sollte auf Smartphone, Tablet und Desktop verständlich bedienbar sein.
 
-## Funktionen
+## So habe ich die Anforderungen umgesetzt
 
-- Speisekarte mit 40 Einträgen: Pizza, Pasta und Getränke.
-- Suche und Kategorieauswahl; Pizzen in zwei Größen mit getrennten Preisen.
-- Warenkorb mit Mengenänderung und exakter Preisberechnung in Cent.
-- Auswahl zwischen Abholung und Lieferung mit passenden Formularfeldern.
-- Tischplan mit Datums- und Zeitauswahl sowie Prüfung der Sitzplatzanzahl.
-- Standortbereich mit optionaler Google-Karte und Routenplanung.
-- Responsive Ansichten, Tastaturbedienung und zugängliche Dialoge.
+| Anforderung | Meine Umsetzung |
+| --- | --- |
+| Ein übersichtliches Speisenangebot | 40 Menüeinträge in den Kategorien Pizza, Pasta und Getränke; Suche nach Name und Beschreibung |
+| Unterschiedliche Pizzagrößen und Preise | Auswahl zwischen 26 und 35 cm; jede Größe wird als eigene Warenkorbposition mit dem zugehörigen Preis geführt |
+| Eine nachvollziehbare Bestellauswahl | Artikel hinzufügen, Mengen ändern und Positionen entfernen; Berechnung in ganzen Cent-Beträgen |
+| Abholung und Lieferung unterscheiden | Passende Eingabefelder je Auswahl; Prüfung der benötigten Kontakt- und Adressangaben vor der Zusammenfassung |
+| Tische für einen Besuch auswählen | Tischplan mit Datum, Uhrzeit und beispielhafter Belegung; Prüfung, ob die gewählten Tische genügend Plätze bieten |
+| Den Standort finden | Standortbereich mit Routenplanung; die Google-Karte wird erst auf Wunsch geladen |
+| Bedienung auf verschiedenen Geräten | Responsive Layouts, mobile Navigation, Tastaturbedienung und beschriftete Formulare und Dialoge |
 
-## Technik
+## Gestaltung und technische Entscheidungen
 
-HTML · CSS · JavaScript (ES-Module) · SVG · Node.js-Testframework
+Die Gestaltung greift das Thema Pizzeria mit Cremetönen, dunklem Grün, Tomatenrot, großer Serifenschrift und dezenten Pizza- und Pasta-Illustrationen auf. Speisekarte, Warenkorb und Tischwahl bilden die zentralen Bereiche der Website.
 
-Die Website kommt ohne Framework und externe Schriftarten aus. Menü, Geschäftslogik und Darstellung liegen in getrennten Modulen. Nutzereingaben werden als Text ausgegeben.
+Umgesetzt habe ich die Website mit **HTML, CSS und JavaScript**. Menüeinträge, Berechnungen und Darstellung liegen in getrennten Modulen. So lassen sich Gerichte und Preise ändern, ohne die gesamte Oberfläche anzupassen. Nutzereingaben werden als Text ausgegeben; die Preisberechnung vermeidet Rundungsfehler durch ganze Cent-Beträge.
 
-## Lokal starten
+## Umfang der Anwendung
 
-Voraussetzung: Python 3.
-
-```sh
-python3 tools/preview.py
-```
-
-Danach `http://127.0.0.1:8765` öffnen. Die Dateien aus `dist/` können auch von einem anderen statischen Webserver ausgeliefert werden.
-
-## Tests
-
-Mit Node.js ab Version 20:
-
-```sh
-node --test tests/*.test.mjs
-```
-
-Zehn Tests prüfen unter anderem Preisberechnung, Pizzagrößen, Mengenbegrenzungen, Datum und Uhrzeit, Tischbelegung, Sitzplatzkapazität und Formulareingaben.
+Das Projekt bildet die Auswahl und Eingabe im Browser ab. Es nimmt keine echten Bestellungen oder Reservierungen entgegen und speichert keine Formulardaten dauerhaft. Die Tischbelegung dient zur Demonstration der Auswahlregeln.
 
 ## Dokumentation
 
 - [Pflichtenheft](docs/PFLICHTENHEFT.md)
-- [Technischer Aufbau](docs/WEITERENTWICKLUNG.md)
+- [Technischer Aufbau, lokale Vorschau und Tests](docs/WEITERENTWICKLUNG.md)
 - [Prüfstand](docs/PRUEFUNG.md)
-
-## Umfang
-
-Die Anwendung ist ein Frontend-Projekt. Bestellungen und Reservierungen werden nicht an ein Restaurant übermittelt. Es gibt keine Datenbank, Zahlungsabwicklung oder E-Mail-Anbindung. Warenkorb und Formulardaten bleiben nur während der aktuellen Seitennutzung erhalten; Neuladen setzt sie zurück. Google Maps wird erst nach einem bewussten Klick eingebunden.
 
 ## Bildmaterial
 
