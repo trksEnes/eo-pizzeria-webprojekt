@@ -1,8 +1,8 @@
 # Pflichtenheft – E&O Pizzeria
 
-**Autor:** Enes Türksever · **Fassung:** Portfolio-Weiterentwicklung, 13. November 2026
+**Autor:** Enes Türksever
 
-Diese Fassung konkretisiert die eigenen Anforderungen des ursprünglichen Hochschul-Testatprojekts für eine moderne Frontend-Demo. Sie dokumentiert die spätere Weiterentwicklung und ersetzt nicht rückwirkend die damalige Abgabe.
+Dieses Pflichtenheft beschreibt die Anforderungen und die technische Umsetzung der Pizzeria-Website.
 
 ## 1. Ziel
 
@@ -72,4 +72,4 @@ Automatisierte Logiktests und manuelle Browserprüfungen sind getrennte Nachweis
 
 ## 8. Nicht Bestandteil
 
-WordPress/CiviCRM aus Praktikum 3, echte Kontakte/Adressdaten, geschäftliche Rechtstexte eines realen Restaurants, Benutzerkonten, Zahlungsanbieter, Versand, Stornierungen und ein Backend gehören nicht zum Funktionsumfang. Die statische Demo wird über GitHub Pages bereitgestellt; Hosting ersetzt keine Restaurantanbindung.
+Benutzerkonten, Zahlungsanbieter, Versand, Stornierungen und ein Backend gehören nicht zum Funktionsumfang. Die Website bildet ausschließlich die Auswahl und Eingabe im Browser ab.

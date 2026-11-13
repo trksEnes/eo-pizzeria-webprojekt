@@ -40,4 +40,4 @@ Ansichten bei 360, 390, 768 und 1440 CSS-Pixeln geprüft: kein horizontaler Seit
 
 Die Speisekarte verwendet große dekorative Pizza- und Pasta-Konturen im Hintergrund; Produktkarten zeigen Nummern, Beschreibung und Auswahl. Im Standortbereich bleiben die Lebensmittelillustrationen und das Basilikum-Motiv erhalten. Die vier Bannerbegriffe stehen in gleich breiten, zentrierten Feldern; mobil in zwei Reihen. Abholung und Lieferung verwenden schlichte Taschen- und Lieferwagen-Symbole.
 
-Diese Anpassungen wurden bei 741 und 360 CSS-Pixeln ohne horizontalen Seitenüberlauf geprüft. Die optionale Karte lädt erst nach Klick. Hosting erfolgt statisch über GitHub Pages; es gibt weiterhin keine Bestell- oder Reservierungsanbindung.
+Diese Anpassungen wurden bei 741 und 360 CSS-Pixeln ohne horizontalen Seitenüberlauf geprüft. Die optionale Karte lädt erst nach Klick. Die Website benötigt nur einen statischen Webserver; es gibt keine Bestell- oder Reservierungsanbindung.
