@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pizza, Pasta und ein guter Abend. Entdecke die E&O-Speisekarte, stelle deine Auswahl zusammen und wähle deinen Lieblingstisch.">
+  <meta name="theme-color" content="#18291f">
+  <title>E&O Pizzeria · Ein Stück Italien</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Zum Inhalt</a>
+  <header class="header">
+    <div class="wrap nav">
+      <a class="brand" href="#start" aria-label="E und O Pizzeria, Startseite"><span class="brand-name">E<span>&</span>O<span class="brand-dot">.</span></span><span class="brand-small">PIZZERIA<br> DÜSSELDORF</span></a>
+      <nav id="navigation" aria-label="Hauptnavigation"><a href="#speisekarte">Speisekarte</a><a href="#reservieren">Tisch reservieren</a><a href="#besuch">Dein Besuch</a><a href="#standort">Standort</a></nav>
+      <div class="nav-actions"><button class="cart-trigger" id="open-cart" aria-label="Warenkorb öffnen"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Zm3 0V6a4 4 0 0 1 8 0v2"/></svg><span class="cart-label">Warenkorb</span><span id="cart-count" class="cart-count">0</span></button><button id="nav-toggle" class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button></div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="start">
+      <div class="hero-copy"><p class="eyebrow">CIAO, DÜSSELDORF.</p><h1>Ein Stück<br> <em>Italien.</em><br> Ganz bei dir.</h1><p class="hero-lead">Ein knuspriger Rand. Dein Lieblingsbelag.<br> Und immer ein guter Grund, zusammenzukommen.</p><div class="hero-actions"><a class="button red" href="#speisekarte">Speisekarte entdecken <span aria-hidden="true">↗</span></a><a class="text-link" href="#reservieren">Lieber hier essen? <span aria-hidden="true">→</span></a></div><div class="hero-note"><span class="line"></span><p>Für deinen Tisch.<br> Oder deinen Lieblingsplatz zu Hause.</p></div></div>
+      <div class="hero-visual"><div class="hero-image"><img src="assets/pizza-ofen.webp" alt="Frisch gebackene Pizza mit goldbraunem Rand im heißen Ofen" fetchpriority="high" width="2000" height="905"></div><div class="hero-side" aria-hidden="true">BUON APPETITO.</div><div class="round-stamp" aria-hidden="true"><span>PIZZA · PASTA</span><b>con<br> <i>amore</i></b><span>E&O PIZZERIA</span></div><div class="photo-caption"><span>01 / DER ERSTE BISS</span><span>Einfach buonissimo.</span></div></div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div class="wrap ticker-inner"><span>PIZZA</span><span>PASTA</span><span>GUTE GESELLSCHAFT</span><span>BUON APPETITO</span></div></div>
+    <section class="menu-section" id="speisekarte" aria-labelledby="menu-title">
+      <div class="menu-background" aria-hidden="true"><img class="menu-background-pizza" src="assets/pizza-background.svg" alt="" width="100" height="100"><img class="menu-background-pasta" src="assets/pasta-background.svg" alt="" width="100" height="100"></div>
+      <div class="wrap section menu-content">
+      <div class="section-head"><div><p class="eyebrow">01 / ETWAS GUTES AUF DEM TELLER</p><h2 id="menu-title">Worauf hast<br> du <em>Appetit?</em></h2></div><p class="section-intro">Dein Klassiker oder eine neue Lieblingspizza?<br> Such dir etwas aus. Den Rest entscheidest du im Warenkorb.</p></div>
+      <div class="menu-tools"><div class="categories" role="group" aria-label="Kategorie wählen"><button data-category="pizza" aria-pressed="true">Pizza <span>10</span></button><button data-category="pasta" aria-pressed="false">Pasta <span>10</span></button><button data-category="drinks" aria-pressed="false">Getränke <span>20</span></button></div><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg><span class="sr-only">Speisekarte durchsuchen</span><input id="menu-search" type="search" placeholder="Dein Lieblingsgericht …" maxlength="80"></label></div>
+      <div class="menu-meta"><p id="category-note">26 oder 35 cm · Du entscheidest.</p><span id="result-count" aria-live="polite"></span></div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="menu-footnote">Alle Preise in Euro. Die Größenangaben beziehen sich auf den Pizzadurchmesser.</p>
+      </div>
+    </section>
+    <section class="gather-section" id="reservieren" aria-labelledby="reserve-title"><div class="wrap gather-inner section">
+      <div class="gather-copy"><p class="eyebrow">02 / GUTE ZEITEN TEILT MAN</p><h2 id="reserve-title">Ein Tisch.<br> Deine Leute.<br> <em>Bella serata.</em></h2><p>Für das Wiedersehen, den Feierabend oder einfach so. Such dir einen Platz aus – wir haben sechs Tische mit jeweils vier Sitzplätzen.</p><div class="gather-drawing" aria-hidden="true"><svg viewBox="0 0 260 145"><path d="M30 105h200M48 105c0-41 31-74 72-74s73 33 73 74M121 15v16M109 15h24M67 123h110M42 108l-7 16m164-16 7 16"/><path d="M214 22c-14 8 9 11-2 21m16-18c-10 8 9 13-2 23"/></svg><span>Bei uns wird aus Essen<br> ein guter Abend.</span></div></div>
+      <div class="reservation-card"><form id="reservation-form" novalidate>
+        <div class="card-title"><h3>Dein Platz am Tisch</h3><span class="small-chip">BENVENUTO</span></div>
+        <div class="form-grid three"><label>Datum<input type="date" id="reservation-date" name="date" required></label><label>Uhrzeit<select id="reservation-time" name="time" required></select></label><label>Personen<select id="guests" name="guests"><option value="1">1 Person</option><option value="2" selected>2 Personen</option><option value="3">3 Personen</option><option value="4">4 Personen</option><option value="5">5 Personen</option><option value="6">6 Personen</option><option value="7">7 Personen</option><option value="8">8 Personen</option></select></label></div>
+        <fieldset class="floor-field"><legend>Welcher Tisch darf es sein?</legend><div class="floorplan"><span class="window-label">FENSTERSEITE</span><div class="table-grid" id="table-grid"></div><span class="entrance-label">EINGANG ↑</span></div><div class="table-legend"><span><i class="free-dot"></i>Frei</span><span><i class="picked-dot"></i>Deine Auswahl</span><span><i class="busy-dot"></i>Belegt</span></div><p class="selection-note" id="selection-note" aria-live="polite">Wähle einen freien Tisch.</p></fieldset>
+        <div class="form-grid"><label class="full">Dein Name<input name="name" id="reservation-name" autocomplete="off" maxlength="80" placeholder="Vor- und Nachname" required></label><label>E-Mail<input name="email" type="email" id="reservation-email" autocomplete="off" maxlength="160" placeholder="name@beispiel.de" required></label><label>Telefon<input name="phone" type="tel" id="reservation-phone" autocomplete="off" maxlength="25" placeholder="Deine Telefonnummer" required></label></div>
+        <p class="form-error" id="reservation-error" role="alert" tabindex="-1" hidden></p><button class="button red full-button" type="submit">Tisch reservieren <span aria-hidden="true">↗</span></button>
+      </form></div>
+    </div></section>
+    <section class="visit-section wrap section" id="besuch" aria-labelledby="visit-title"><div class="visit-heading"><p class="eyebrow">03 / BIS GLEICH</p><h2 id="visit-title">Der Abend<br> kann <em>kommen.</em></h2><p>Hier essen, mitnehmen oder liefern lassen.<br> Hauptsache, es schmeckt nach deinem Abend.</p><a class="text-link" href="#speisekarte">Schon mal etwas aussuchen <span aria-hidden="true">↗</span></a></div><div class="hours"><p class="eyebrow">UNSERE ÖFFNUNGSZEITEN</p><dl><div><dt>Montag – Freitag</dt><dd>16:30 – 21:30</dd></div><div><dt>Samstag & Sonntag</dt><dd>14:00 – 21:30</dd></div><div><dt>Feiertage</dt><dd>17:30 – 21:30</dd></div></dl><div class="service-options"><div><span aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M7 11h18l1 17H6L7 11Z"/><path d="M11 12V8a5 5 0 0 1 10 0v4"/></svg></span><h3>Zum Mitnehmen</h3><p>Abholung ab ca. 30 Minuten</p></div><div><span aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M3 7h16v17H3V7Zm16 6h6l5 6v5h-3m-8 0h3M8 24h11"/><path d="M22 13v7h8"/><circle cx="8" cy="25" r="3"/><circle cx="24" cy="25" r="3"/></svg></span><h3>Zu dir nach Hause</h3><p>Lieferung ca. 30–55 Minuten</p></div></div></div></section>
+    <section class="location-section" id="standort" aria-labelledby="location-title">
+      <div class="location-decoration" aria-hidden="true"><img class="basil-background" src="assets/basil-line.svg" alt="" width="180" height="160"></div>
+      <div class="wrap location-inner">
+        <div class="location-copy">
+          <p class="eyebrow">04 / ALLE WEGE FÜHREN ZUR PIZZA</p>
+          <h2 id="location-title">Hier findest<br> du <em>uns.</em></h2>
+          <p>Mitten in Düsseldorf. Für eine Pause vom Alltag, einen Abend mit Freunden und ein Stück Italien.</p>
+          <div class="location-food-art" aria-hidden="true"><img src="assets/pizza-line.svg" alt="" width="84" height="84"><img src="assets/pasta-line.svg" alt="" width="84" height="84"><img src="assets/basil-line.svg" alt="" width="100" height="90"></div>
+          <span class="location-city">DÜSSELDORF · AM RHEIN</span>
+          <a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=51.2237983%2C6.7675796" target="_blank" rel="noopener noreferrer">Route planen <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="location-map" id="location-map">
+          <div class="map-preview" id="map-preview">
+            <svg class="map-art" viewBox="0 0 700 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="700" height="500" fill="#e7e8da"/>
+              <g fill="none" stroke="#f9f6ee" stroke-width="16"><path d="M0 80 700 370M0 230 700 490M170 0 40 500M410 0 265 500M650 0 490 500"/><path d="M0 390 700 140M0 120 360 0" stroke-width="9"/></g>
+              <path d="M320-70C120 80 330 210 170 330S90 480 210 570" fill="none" stroke="#c0d1ca" stroke-width="94"/>
+              <path d="m110 257 205 72m-38-230 160 58" fill="none" stroke="#faf7ef" stroke-width="12"/>
+            </svg>
+            <div class="map-load-card">
+              <span class="map-pin" aria-hidden="true"><svg viewBox="0 0 32 40" fill="none"><path d="M16 37S3 24 3 16a13 13 0 1 1 26 0c0 8-13 21-13 21Z"/><circle cx="16" cy="16" r="4"/></svg></span>
+              <span class="eyebrow">CIAO, NACHBAR.</span>
+              <h3>Fast schon da.</h3>
+              <button class="button dark" id="load-map" type="button">Google Maps laden <span aria-hidden="true">↗</span></button>
+              <p>Mit dem Laden stellst du eine Verbindung zu Google her.</p>
+            </div>
+            <span class="map-caption" aria-hidden="true">DÜSSELDORF / AM RHEIN</span>
+          </div>
+          <p class="sr-only" id="map-status" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-top"><a href="#start" class="footer-brand">E&O<span>.</span></a><p>Pizza. Pasta.<br> <em>Piacere.</em></p><a class="back-top" href="#start" aria-label="Zurück nach oben">↑</a></div><div class="wrap footer-bottom"><span>E&O Pizzeria · Düsseldorf</span><div><a href="#speisekarte">Speisekarte</a><a href="#reservieren">Reservieren</a><a href="#standort">Standort</a><button id="privacy-open">Datenschutz</button></div><span>Mit gutem Geschmack.</span></div></footer>
+  <button class="floating-cart" id="floating-cart" hidden><span><b id="floating-count">0</b> Deine Auswahl</span><strong id="floating-total">0,00 €</strong><span aria-hidden="true">→</span></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"><div class="drawer-head"><p class="eyebrow">BUON APPETITO</p><button class="icon-button" id="close-cart" aria-label="Warenkorb schließen">×</button><h2 id="cart-title">Deine <em>Auswahl.</em></h2></div><div id="cart-view"><div id="cart-lines" class="cart-lines"></div><div id="cart-summary" hidden><div class="cart-total"><span>Gesamtbetrag</span><strong id="cart-total"></strong></div><p class="cart-hint">Wie möchtest du dein Essen genießen?</p><button class="button red full-button" id="go-checkout">Weiter zur Auswahl <span aria-hidden="true">→</span></button></div><a class="text-link continue-shopping" id="continue-shopping" href="#speisekarte">Noch etwas aussuchen <span aria-hidden="true">↗</span></a></div>
+    <form id="checkout-form" novalidate hidden><button type="button" id="back-cart" class="back-link">← Zurück zum Warenkorb</button><fieldset class="fulfilment"><legend>Abholen oder liefern lassen?</legend><label><input type="radio" name="mode" value="pickup" checked><span>Abholung<small>ab ca. 30 Minuten</small></span></label><label><input type="radio" name="mode" value="delivery"><span>Lieferung<small>ca. 30–55 Minuten</small></span></label></fieldset><label class="form-label">Dein Name<input id="checkout-name" name="name" placeholder="Vor- und Nachname" maxlength="80" autocomplete="off" required></label><fieldset id="delivery-fields" class="delivery-fields" disabled hidden><legend>Kontakt & Lieferadresse</legend><div class="form-grid"><label class="full">E-Mail<input name="email" type="email" maxlength="160" autocomplete="off" required></label><label class="full">Telefon<input name="phone" type="tel" maxlength="25" autocomplete="off" required></label><label>Straße<input name="street" maxlength="100" autocomplete="off" required></label><label>Hausnummer<input name="house" maxlength="12" autocomplete="off" required></label><label>Postleitzahl<input name="postcode" inputmode="numeric" maxlength="5" autocomplete="off" required></label><label>Ort<input name="city" maxlength="80" autocomplete="off" required></label></div></fieldset><div class="pay-note"><span aria-hidden="true">↳</span><p id="pay-note">Bezahlung bei Abholung: bar oder mit Karte.</p></div><div class="cart-total"><span>Gesamtbetrag</span><strong id="checkout-total"></strong></div><p class="form-error" id="checkout-error" role="alert" tabindex="-1" hidden></p><button class="button red full-button" type="submit">Bestellung abschließen <span aria-hidden="true">↗</span></button></form>
+    <div id="order-receipt" class="receipt" hidden><span class="receipt-mark" aria-hidden="true">✓</span><p class="eyebrow">ALLES AUF EINEN BLICK</p><h3>Deine<br> Bestellübersicht.</h3><div id="order-details"></div><button class="button dark full-button" id="finish-order">Zurück zur Speisekarte <span aria-hidden="true">↗</span></button></div>
+  </dialog>
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"><button class="icon-button" id="close-info" aria-label="Fenster schließen">×</button><p class="eyebrow" id="info-eyebrow"></p><h2 id="info-title"></h2><div id="info-content"></div><button class="button dark full-button" id="info-done">Alles klar <span aria-hidden="true">↗</span></button></dialog>
+</body>
+</html>
