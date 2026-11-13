@@ -1,65 +1,38 @@
 # E&O Pizzeria
 
-Eine responsive Pizzeria-Website mit Speisekarte, Warenkorb, Abhol- und Lieferauswahl sowie einer interaktiven Tischauswahl. **Portfolio-Weiterentwicklung eines bestehenden Hochschul-Testatprojekts.**
+**Responsive Pizzeria-Website mit HTML, CSS und JavaScript · Enes Türksever**
 
-[Website ansehen](https://trksEnes.github.io/eo-pizzeria-webprojekt/) · [Pflichtenheft](docs/PFLICHTENHEFT.md) · [Prüfstand](docs/PRUEFUNG.md)
+## Aufgabe und Umsetzung
 
-## Projektkontext und Urheberschaft
+Im Webentwicklungspraktikum war die Aufgabe, eine Pizzeria-Website zu planen und umzusetzen. Auf Grundlage meines Pflichtenhefts habe ich eine Speisekarte mit Bestellauswahl und eine interaktive Tischauswahl realisiert.
 
-Das ursprüngliche Hochschulprojekt von Enes Türksever umfasste die Anforderungsplanung und die Umsetzung einer Pizzeria-Website. Grundlage dieser Weiterentwicklung sind das eigene Lastenheft, das Pflichtenheft und die HTML-/CSS-/JavaScript-Dateien aus den Praktika 1 und 2.
+Die Website verbindet eine responsive Gestaltung mit filterbaren Menüeinträgen, einem Warenkorb und Formularvalidierung. Die Anwendungslogik ist von der Darstellung getrennt und wird durch automatisierte Tests geprüft.
 
-Die aktuelle Fassung wurde im November 2026 mit KI-Unterstützung neu gestaltet und technisch überarbeitet. Die neue Gestaltung, die modularisierte Logik und die Tests gehören zur Weiterentwicklung; sie werden nicht als unveränderte damalige Prüfungsabgabe dargestellt. Praktikum 3 (WordPress/CiviCRM) ist ein eigenständiges Thema und nicht Bestandteil dieses Projekts.
+## Funktionen
 
-## Lokal ansehen
+- Speisekarte mit 40 Einträgen: Pizza, Pasta und Getränke.
+- Suche und Kategorieauswahl; Pizzen in zwei Größen mit getrennten Preisen.
+- Warenkorb mit Mengenänderung und exakter Preisberechnung in Cent.
+- Auswahl zwischen Abholung und Lieferung mit passenden Formularfeldern.
+- Tischplan mit Datums- und Zeitauswahl sowie Prüfung der Sitzplatzanzahl.
+- Standortbereich mit optionaler Google-Karte und Routenplanung.
+- Responsive Ansichten, Tastaturbedienung und zugängliche Dialoge.
 
-Voraussetzung: Python 3. Keine Installation von Bibliotheken notwendig.
+## Technik
+
+HTML · CSS · JavaScript (ES-Module) · SVG · Node.js-Testframework
+
+Die Website kommt ohne Framework und externe Schriftarten aus. Menü, Geschäftslogik und Darstellung liegen in getrennten Modulen. Nutzereingaben werden als Text ausgegeben.
+
+## Lokal starten
+
+Voraussetzung: Python 3.
 
 ```sh
 python3 tools/preview.py
 ```
 
-Danach `http://127.0.0.1:8765` öffnen. Mit `Strg+C` beenden. Alternativ kann `dist/` von einem beliebigen statischen Webserver ausgeliefert werden. ES-Module benötigen HTTP; ein Doppelklick auf die HTML-Datei ist nicht der vorgesehene Startweg.
-
-## Was funktioniert
-
-- 40 Menüeinträge mit insgesamt 50 Preisvarianten aus der damaligen Bestellseite.
-- Kategorien Pizza, Pasta und Getränke sowie Suche innerhalb der aktiven Kategorie.
-- Pizzen mit 26 oder 35 cm, getrennte Warenkorbpositionen pro Größe.
-- Mengenänderung, Entfernen, leere Zustände und Preisberechnung in ganzen Cent-Beträgen.
-- Abholung oder Lieferung mit jeweils passenden Eingabefeldern und Validierung.
-- Tagesabhängige Zeitauswahl, sechs Tische mit je vier Plätzen und bis zu zwei auswählbare Tische.
-- Reproduzierbare Beispielbelegung je Datum und Uhrzeit; Prüfung der Sitzplatzanzahl.
-- Zusammenfassungen der Bestell- und Reservierungsauswahl.
-- Standortbereich mit Google Maps nach Klick und externer Routenplanung.
-- Mobile Navigation, Tastaturbedienung, beschriftete Formularfelder und native Dialoge.
-
-## Bewusste Abgrenzung
-
-**Dies ist eine Frontend-Demo. Es werden keine Bestellungen, Zahlungen oder Reservierungen angenommen.** Die abschließenden Ansichten sind Zusammenfassungen der eingegebenen Auswahl, keine Zusagen eines Restaurants.
-
-Es gibt keine Datenbank, keinen API-Endpunkt und keine E-Mail- oder Zahlungsanbindung. Warenkorb, Auswahl und Eingaben existieren nur flüchtig auf der aktuellen Seite. Die Anwendung selbst verwendet weder `localStorage` noch `sessionStorage`, Cookies oder IndexedDB. Für die nach Klick geladene Google-Karte gelten zusätzlich die Datenverarbeitung und Speichermechanismen des Kartenanbieters. Neuladen setzt den Zustand zurück. Beim Schließen der Übersichten werden die dafür verwendeten personenbezogenen Angaben gelöscht.
-
-Ein statischer HTTP-Server liefert die Dateien aus; er ist keine Bestell- oder Reservierungsanwendung. Ein Produktivbetrieb würde eine eigenständige Backend-, Datenschutz-, Zahlungs- und Betriebsplanung benötigen.
-
-## Technik und Aufbau
-
-| Datei | Aufgabe |
-| --- | --- |
-| `dist/index.html` | Semantische Seitenstruktur, Formulare und Dialoge |
-| `dist/style.css` | Gestaltungsvariablen, responsive Layouts und Zustände |
-| `dist/menu.mjs` | Speisekartendaten und Preisvarianten |
-| `dist/logic.mjs` | Getrennt prüfbare Warenkorb-, Datums- und Validierungslogik |
-| `dist/app.mjs` | DOM-Darstellung und flüchtiger Anwendungszustand |
-| `tests/logic.test.mjs` | Automatisierte Tests für zentrale Regeln |
-| `docs/PFLICHTENHEFT.md` | Aktualisierte Anforderungen und Abnahmekriterien |
-| `docs/WEITERENTWICKLUNG.md` | Änderungen gegenüber den gelieferten Dateien |
-| `docs/PRUEFUNG.md` | Prüfstand, Browserabläufe und bekannte Grenzen |
-
-Die Website benötigt keine JavaScript-Bibliotheken, externen Schriften oder Analysewerkzeuge. Die optionale Google-Maps-Einbettung lädt erst nach einem bewussten Klick; zuvor bleibt eine lokal gezeichnete schematische Vorschau sichtbar. Die Routenplanung öffnet Google Maps extern. Die Markierung wurde aus der ursprünglichen Vorlage übernommen; eine reale Restaurantadresse wurde nicht neu verifiziert oder ergänzt. Nutzereingaben werden mit `textContent` dargestellt, nicht als HTML eingesetzt.
-
-## Veröffentlichung
-
-Der Quellstand liegt auf `main`. Der Workflow `.github/workflows/pages.yml` prüft die JavaScript-Syntax und die Logiktests und veröffentlicht danach ausschließlich `dist/` über GitHub Pages. Neue Änderungen an `main` aktualisieren damit die Demo. Dokumentation, Tests und lokale Werkzeuge werden nicht als Website ausgeliefert.
+Danach `http://127.0.0.1:8765` öffnen. Die Dateien aus `dist/` können auch von einem anderen statischen Webserver ausgeliefert werden.
 
 ## Tests
 
@@ -69,10 +42,18 @@ Mit Node.js ab Version 20:
 node --test tests/*.test.mjs
 ```
 
-Die Tests prüfen unter anderem unterschiedliche Pizzagrößen, exakte Summen, Mengenbegrenzungen, ungültige Daten, Tageswechsel, vergangene Uhrzeiten, reproduzierbare Belegung und abgewiesene Reservierungs-/Bestellangaben. Ein erfolgreicher Test dieser Regeln ersetzt keine Prüfung einer echten Restaurantanbindung – eine solche gibt es hier nicht.
+Zehn Tests prüfen unter anderem Preisberechnung, Pizzagrößen, Mengenbegrenzungen, Datum und Uhrzeit, Tischbelegung, Sitzplatzkapazität und Formulareingaben.
 
-## Bildquelle
+## Dokumentation
 
-`dist/assets/pizza-ofen.webp` ist eine für die Webdarstellung verkleinerte und komprimierte Fassung des gelieferten Bildes `banner-bild.jpg` aus Praktikum 2. Der ursprüngliche Fotograf und die ursprüngliche Lizenz sind in den gelieferten Dateien nicht dokumentiert. Das Bild wurde aus dem bereitgestellten Projektmaterial übernommen; eine gesonderte Bildlizenz wird durch dieses Repository nicht erteilt. Die Bilddatei enthält keine übernommenen EXIF-Metadaten. Das Favicon und die einfachen grafischen Elemente sind für diese Weiterentwicklung erstellt.
+- [Pflichtenheft](docs/PFLICHTENHEFT.md)
+- [Technischer Aufbau](docs/WEITERENTWICKLUNG.md)
+- [Prüfstand](docs/PRUEFUNG.md)
 
-Die originalen ZIP-Dateien, Installationsanleitungen, PDFs, Zugangsdaten und persönlichen Angaben aus anderen Praktika sind nicht Bestandteil dieses Projektordners.
+## Umfang
+
+Die Anwendung ist ein Frontend-Projekt. Bestellungen und Reservierungen werden nicht an ein Restaurant übermittelt. Es gibt keine Datenbank, Zahlungsabwicklung oder E-Mail-Anbindung. Warenkorb und Formulardaten bleiben nur während der aktuellen Seitennutzung erhalten; Neuladen setzt sie zurück. Google Maps wird erst nach einem bewussten Klick eingebunden.
+
+## Bildmaterial
+
+Das Ofenfoto wurde aus dem vorhandenen Projektmaterial übernommen und als WebP optimiert. Eine gesonderte Bildlizenz ist in den Ausgangsdateien nicht angegeben. Favicon und SVG-Illustrationen wurden für die Website erstellt.
