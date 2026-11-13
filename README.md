@@ -59,7 +59,7 @@ Die Website benötigt keine JavaScript-Bibliotheken, externen Schriften oder Ana
 
 ## Veröffentlichung
 
-Der Quellstand liegt auf `main`. GitHub Pages liefert den Inhalt von `dist/` über den Veröffentlichungsbranch `gh-pages` aus. Änderungen am Quellstand müssen auch in diesen Branch übernommen werden. Der Branch enthält ausschließlich die statischen Website-Dateien und `.nojekyll`.
+Der Quellstand liegt auf `main`. Der Workflow `.github/workflows/pages.yml` prüft die JavaScript-Syntax und die Logiktests und veröffentlicht danach ausschließlich `dist/` über GitHub Pages. Neue Änderungen an `main` aktualisieren damit die Demo. Dokumentation, Tests und lokale Werkzeuge werden nicht als Website ausgeliefert.
 
 ## Tests
 
