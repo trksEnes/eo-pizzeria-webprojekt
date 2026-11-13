@@ -1,0 +1,11 @@
+.DS_Store
+._*
+__MACOSX/
+node_modules/
+.env
+.env.*
+*.log
+*.zip
+*.tgz
+__pycache__/
+.openai/

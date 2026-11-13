@@ -1,0 +1,9 @@
+{
+  "name": "eo-pizzeria-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio-Weiterentwicklung einer Pizzeria-Website, ohne Backend oder Datenspeicherung.",
+  "scripts": { "test": "node --test tests/*.test.mjs", "dev": "python3 tools/preview.py" },
+  "engines": { "node": ">=20" }
+}
