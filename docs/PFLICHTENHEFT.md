@@ -51,7 +51,7 @@ Die Lieferschätzung 30–55 Minuten und Abholung ab etwa 30 Minuten stammen aus
 
 - **Responsivität:** Bedienbare Ansicht ab 360 CSS-Pixeln, kein horizontaler Seitenüberlauf.
 - **Zugänglichkeit:** Semantische Überschriften, Alternativtext, Beschriftungen, sichtbarer Fokus, native Dialoge und verringerte Bewegung bei entsprechender Systemeinstellung.
-- **Datensparsamkeit:** Keine persistente Speicherung von Formulardaten, fremde Analyseangebote oder eingebundenen Drittanbieter-Schriften. Die optionale Google-Karte lädt erst nach Klick mit Hinweis auf die Verbindung zu Google.
+- **Datensparsamkeit:** Keine persistente Speicherung von Formulardaten, keine Analysewerkzeuge und keine eingebundenen Drittanbieter-Schriften. Die optionale Google-Karte lädt erst nach Klick mit Hinweis auf die Verbindung zu Google.
 - **Wartbarkeit:** Menü als Datenmodul; zentrale Gestaltungsvariablen; Logik getrennt von DOM und Darstellung.
 - **Leistung:** Bild für die Webnutzung optimiert; kein Framework-Bundle und keine externen Laufzeitabhängigkeiten.
 - **Sicherheit der Darstellung:** Nutzereingaben nicht als HTML interpretieren; keine Zugangsdaten im auszuliefernden Verzeichnis.
@@ -72,4 +72,4 @@ Automatisierte Logiktests und manuelle Browserprüfungen sind getrennte Nachweis
 
 ## 8. Nicht Bestandteil
 
-WordPress/CiviCRM aus Praktikum 3, echte Kontakte/Adressdaten, geschäftliche Rechtstexte eines realen Restaurants, Benutzerkonten, Zahlungsanbieter, Versand, Stornierungen, Backend gehören nicht zum Funktionsumfang. Die statische Demo wird über GitHub Pages bereitgestellt; Hosting ersetzt keine Restaurantanbindung.
+WordPress/CiviCRM aus Praktikum 3, echte Kontakte/Adressdaten, geschäftliche Rechtstexte eines realen Restaurants, Benutzerkonten, Zahlungsanbieter, Versand, Stornierungen und ein Backend gehören nicht zum Funktionsumfang. Die statische Demo wird über GitHub Pages bereitgestellt; Hosting ersetzt keine Restaurantanbindung.
