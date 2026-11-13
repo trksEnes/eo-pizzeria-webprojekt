@@ -2,6 +2,8 @@
 
 **Responsive Pizzeria-Website mit HTML, CSS und JavaScript · Enes Türksever**
 
+**[Website ansehen](https://enes-tuerksever.de/PizzaSeite/)**
+
 ## Die Aufgabe
 
 Im Webentwicklungspraktikum sollte ich eine Pizzeria-Website planen und umsetzen. In meinem Pflichtenheft habe ich dafür die Seitenstruktur, die Funktionen und das Verhalten der Bestell- und Tischauswahl beschrieben.
@@ -33,7 +35,7 @@ Das Projekt bildet die Auswahl und Eingabe im Browser ab. Es nimmt keine echten 
 ## Dokumentation
 
 - [Pflichtenheft](docs/PFLICHTENHEFT.md)
-- [Technischer Aufbau, lokale Vorschau und Tests](docs/WEITERENTWICKLUNG.md)
+- [Technischer Aufbau](docs/WEITERENTWICKLUNG.md)
 - [Prüfstand](docs/PRUEFUNG.md)
 
 ## Bildmaterial
